@@ -1,0 +1,40 @@
+{
+  "name": "clinic-app",
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "react-start": "set BROWSER=none&& react-scripts start",
+    "electron-start": "wait-on http://localhost:3000 && electron .",
+    "dev": "concurrently \"npm run react-start\" \"npm run electron-start\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "electron-is-dev": "^3.0.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-scripts": "^5.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.4",
+    "electron": "^43.3.0",
+    "electron-builder": "^26.15.3",
+    "wait-on": "^9.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
