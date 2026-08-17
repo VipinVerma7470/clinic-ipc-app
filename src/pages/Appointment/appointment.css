@@ -1,0 +1,517 @@
+/* =========================================================
+   APPOINTMENT PAGE
+========================================================= */
+
+.appointment-page {
+  padding: 10px;
+  color: #1e293b;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.appointment-header h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.appointment-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+
+/* ADD PATIENT BUTTON */
+
+.add-patient-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.add-patient-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================================
+   SEARCH + STATUS DROPDOWN
+========================================================= */
+
+.appointment-filter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.appointment-filter input {
+  flex: 1;
+  height: 46px;
+  box-sizing: border-box;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+
+  padding: 0 15px;
+  outline: none;
+
+  font-size: 14px;
+  background: #ffffff;
+  color: #334155;
+}
+
+.appointment-filter input::placeholder {
+  color: #94a3b8;
+}
+
+.appointment-filter input:focus {
+  border-color: #2563eb;
+}
+
+.appointment-filter select {
+  width: 180px;
+  height: 46px;
+
+  border-radius: 8px;
+  border: 1px solid #dbe2ea;
+
+  outline: none;
+  padding: 0 12px;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  background: #ffffff;
+  color: #334155;
+}
+
+.appointment-filter select:focus {
+  border-color: #2563eb;
+}
+
+
+/* =========================================================
+   STATUS + DATE MAIN CARD
+========================================================= */
+
+.appointment-status-row {
+  width: 100%;
+  min-height: 76px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 14px 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   STATUS CARDS
+========================================================= */
+
+.appointment-status-cards {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* Individual status card */
+
+.status-summary-card {
+  min-width: 145px;
+  height: 44px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  transition: 0.2s ease;
+}
+
+
+/* Active card */
+
+.status-summary-card.active {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+
+/* Hover */
+
+.status-summary-card:hover {
+  border-color: #93c5fd;
+}
+
+
+/* Card title */
+
+.status-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.status-summary-card.active .status-card-title {
+  color: #2563eb;
+}
+
+
+/* Count */
+
+.status-card-count {
+  min-width: 27px;
+  height: 25px;
+
+  padding: 0 7px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   DATE FILTER
+========================================================= */
+
+.appointment-date-filter {
+  position: relative;
+}
+
+.date-picker-btn {
+  width: 175px;
+  height: 44px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #334155;
+
+  font-size: 13px;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.date-picker-btn:hover {
+  border-color: #93c5fd;
+}
+
+.date-today {
+  font-weight: 600;
+  color: #334155;
+}
+
+.date-divider {
+  width: 1px;
+  height: 20px;
+  background: #e2e8f0;
+}
+
+.calendar-icon {
+  font-size: 15px;
+}
+
+.hidden-date-input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.appointment-table {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 3px 15px rgba(15, 23, 42, 0.06);
+}
+
+.appointment-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+/* Table Header */
+
+.appointment-table thead {
+  background: #f8fafc;
+}
+
+.appointment-table th {
+  padding: 15px 16px;
+
+  text-align: left;
+
+  color: #475569;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  white-space: nowrap;
+}
+
+
+/* Table Body */
+
+.appointment-table td {
+  padding: 17px 16px;
+
+  border-bottom: 1px solid #eef2f7;
+
+  color: #475569;
+
+  font-size: 13px;
+}
+
+.appointment-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.appointment-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+
+/* Patient name */
+
+.appointment-table td strong {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   VISIT BUTTON
+========================================================= */
+
+.visit-btn {
+  background: #16a34a;
+
+  color: #ffffff;
+
+  border: none;
+
+  padding: 8px 17px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.visit-btn:hover {
+  background: #15803d;
+}
+
+
+/* =========================================================
+   EDITABLE STATUS
+========================================================= */
+
+/* =========================================================
+   EDITABLE STATUS
+========================================================= */
+
+.status-select {
+  width: 110px;
+  height: 34px;
+
+  padding: 0 30px 0 12px;
+
+  border: none;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  outline: none;
+  cursor: pointer;
+
+  text-align: center;
+  text-align-last: center;
+
+  appearance: auto;
+  box-sizing: border-box;
+}
+
+/* Booked */
+.status-select.booked {
+  background: #f3e8ff;
+  color: #7e22ce;
+}
+
+/* Pending */
+.status-select.pending {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+/* Ongoing */
+.status-select.ongoing {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+/* Completed */
+.status-select.complete {
+  background: #ecfdf5;
+  color: #16a34a;
+
+  cursor: default;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 110px;
+  height: 34px;
+
+  padding: 0 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .appointment-table {
+    overflow-x: auto;
+  }
+
+  .appointment-table table {
+    min-width: 1050px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .appointment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .appointment-filter {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .appointment-filter input,
+  .appointment-filter select {
+    width: 100%;
+  }
+
+  .appointment-status-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .appointment-status-cards {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .status-summary-card {
+    flex: 1;
+  }
+
+  .appointment-date-filter {
+    align-self: flex-end;
+  }
+}

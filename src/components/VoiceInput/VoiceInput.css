@@ -1,0 +1,238 @@
+.voice-mic-btn {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.voice-mic-btn:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+}
+
+.voice-mic-active {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+.voice-mic-active:hover {
+  background: #fecaca;
+  color: #dc2626;
+}
+
+
+/* ===============================
+   LANGUAGE OVERLAY
+================================ */
+
+.voice-language-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.35);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+
+/* ===============================
+   POPUP
+================================ */
+
+.voice-language-popup {
+  width: 400px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 20px 50px rgba(15, 23, 42, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* ===============================
+   HEADER
+================================ */
+
+.voice-popup-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 20px 22px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.voice-popup-header h3 {
+  margin: 0;
+
+  font-size: 19px;
+
+  color: #172033;
+}
+
+.voice-popup-header p {
+  margin: 5px 0 0;
+
+  font-size: 13px;
+
+  color: #64748b;
+}
+
+.voice-close-btn {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  background: transparent;
+
+  color: #64748b;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+}
+
+.voice-close-btn:hover {
+  background: #f1f5f9;
+
+  color: #111827;
+}
+
+
+/* ===============================
+   LANGUAGE OPTIONS
+================================ */
+
+.voice-language-options {
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.voice-language-option {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #dbe2ea;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    border 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.voice-language-option:hover {
+  background: #f8fafc;
+
+  border-color: #2563eb;
+
+  transform: translateY(-1px);
+}
+
+.language-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f1f5f9;
+
+  border-radius: 9px;
+
+  font-size: 23px;
+}
+
+.voice-language-option div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.voice-language-option strong {
+  font-size: 15px;
+
+  color: #172033;
+}
+
+.voice-language-option small {
+  font-size: 12px;
+
+  color: #64748b;
+}
+
+
+/* ===============================
+   CONVERTING
+================================ */
+
+.voice-converting {
+  position: absolute;
+
+  right: 50px;
+  bottom: 5px;
+
+  font-size: 11px;
+
+  color: #2563eb;
+}
